@@ -52,15 +52,15 @@ class SampleController(private val callbacks: AdapterCallbacks) :
         clearButton
             .textRes(R.string.button_clear)
             .clickListener { v: View? -> callbacks.onClearCarouselsClicked() }
-            .addIf(carousels.size > 0, this)
-        shuffleButton
-            .textRes(R.string.button_shuffle)
-            .clickListener { v: View? -> callbacks.onShuffleCarouselsClicked() }
-            .addIf(carousels.size > 1, this)
-        changeColorsButton
-            .textRes(R.string.button_change)
-            .clickListener { v: View? -> callbacks.onChangeAllColorsClicked() }
-            .addIf(carousels.size > 0, this)
+            .addIf(true, this)
+//        shuffleButton
+//            .textRes(R.string.button_shuffle)
+//            .clickListener { v: View? -> callbacks.onShuffleCarouselsClicked() }
+//            .addIf(carousels.size > 1, this)
+//        changeColorsButton
+//            .textRes(R.string.button_change)
+//            .clickListener { v: View? -> callbacks.onChangeAllColorsClicked() }
+//            .addIf(carousels.size > 0, this)
         for (i in carousels.indices) {
             val carousel = carousels[i]
             add(CarouselModelGroup(carousel, callbacks))

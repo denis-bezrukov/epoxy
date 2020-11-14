@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements AdapterCallbacks 
 
     EpoxyRecyclerView recyclerView = (EpoxyRecyclerView) findViewById(R.id.recycler_view);
     recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
+    recyclerView.setItemSpacingDp(64);
 
     recyclerView.setController(controller);
 
